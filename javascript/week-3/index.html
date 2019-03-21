@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body onload="startGame()">
+    <canvas id="gameOfLife" width="400" height="400" style="border:1px solid #d3d3d3">
+    
+    <script>
+    var gameCanvas = document.getElementById("ganeOfLife");
+    
+    var gameGrid = [[]];
+
+    class cell
+    {
+        constructor(width, height)
+        {
+            this.width = width;
+            this.height = height;
+            console.log('Created Cell; ' + id);
+        }
+    }
+        class GameBoard
+        {
+        constructor(width, height, rows, colums)
+            {
+            this.width = width;
+            this.height = height;
+            this.cells = [];
+            for (var i = 0; i < rows; i++)
+            {
+                cells.push(new Cell(width / rows), (heght / colums), i)
+            }
+        }
+        }
+
+    function startGame()
+    {
+        console.log("startGame");
+        var gameBoard = new GameBoard(400,400, 10,10);
+    }
+
+
+    </script>
+
+</body>
+</html>
