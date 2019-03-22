@@ -1,0 +1,37 @@
+/* body {
+    padding-top: 40px;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+}
+
+#target {
+    font-size: 48px;
+    letter-spacing: 3px;
+}
+
+.info {
+    color: #ccc;
+} */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+}
+
+.container{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+}
+
+.type {
+    color: #fff;
+    font-weight: bold;
+    font-size: 64px;
+}
