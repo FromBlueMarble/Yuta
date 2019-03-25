@@ -15,6 +15,21 @@ var types = QUESTION.split('').map(function(str){
     document.querySelector('.container').appendChild(type);
     return type;
 });
+var timer = null;
+var startTime = 0;
+function timerStart() {
+    startTime = new Date().getTime();
+    timer = setInterval(function() {
+        var time = (new Date().getTime() - startTime) / 1000
+        document.querySelector('.timer').textContent = time.toFixed(3);
+    }, 10)
+}
+
+// time stop 
+ function timerEnd() {
+     clearInterval(timer);
+     timer = null;
+ }
 
 document.addEventListener('keydown',function(event){
     var keyCode = event.keyCode;
@@ -38,17 +53,23 @@ document.addEventListener('keydown',function(event){
     }
 
     if (key) {
+        if (timer === null) {
+            timerStart();
+        }
+    }
+
+    if (key) {
         var next = types[0];
         if (next.textContent === key) {
             next.classList.add('ok');
             types.shift();
             if (types.length === 0) {
-                alert('finish');
-            } else{
+                timerEnd();
+            } 
+        } else{
                 next.classList.add('ng');
             }
         }
-    }
 
     console.log(key);
 

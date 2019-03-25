@@ -43,3 +43,12 @@ body {
 .type.ok {
     color: #2789ff;
 }
+
+.timer  {
+    color: #fff;
+    font-size: 64px;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 20%;
+}
