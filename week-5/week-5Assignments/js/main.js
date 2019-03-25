@@ -6,17 +6,25 @@
 //     });
 // }
 
-var QUESTION ='Hello world';
-
-var types = QUESTION.split('').map(function(str){
-    var type = document.createElement('span');
-    type.className = 'type';
-    type.textContent = str;
-    document.querySelector('.container').appendChild(type);
-    return type;
-});
+var QUESTION = localStorage.QUESTION || 'Hello world';
+var types = [];
 var timer = null;
 var startTime = 0;
+
+function init() {
+    document.querySelector('.container').innerHTML = '';
+    types= QUESTION.split('').map(function(str){
+        var type = document.createElement('span');
+        type.className = 'type';
+        type.textContent = str;
+        document.querySelector('.container').appendChild(type);
+        return type;
+    });
+    timerEnd();
+    document.querySelector('.timer').textContent = '0.000';
+}
+init();
+
 function timerStart() {
     startTime = new Date().getTime();
     timer = setInterval(function() {
@@ -35,6 +43,7 @@ document.addEventListener('keydown',function(event){
     var keyCode = event.keyCode;
 
     if (keyCode === 13) { // enter key
+        init();
         return;
     }
 
@@ -72,5 +81,12 @@ document.addEventListener('keydown',function(event){
         }
 
     console.log(key);
-
 });
+
+document.querySelector('.container').addEventListener('clock', function(event){})
+    var text = prompt('Please enter sentences');
+    if (text) {
+        QUESTION = text;
+        localStorage.QUESTION = text;
+        init();
+    }

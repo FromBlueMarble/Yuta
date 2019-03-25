@@ -42,6 +42,19 @@ body {
 
 .type.ok {
     color: #2789ff;
+    -webkit-animation: pyon 1s;
+}
+
+@-webkit-keyframes pyonkul {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px) rotate(360deg);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .timer  {
