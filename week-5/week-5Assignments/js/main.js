@@ -18,4 +18,38 @@ var types = QUESTION.split('').map(function(str){
 
 document.addEventListener('keydown',function(event){
     var keyCode = event.keyCode;
+
+    if (keyCode === 13) { // enter key
+        return;
+    }
+
+    var key = '';
+    if (keyCode === 32) { // space key
+        key = " ";
+    }
+
+    if(keyCode >= 65 && keyCode <= 90) { // a to z
+        key = String.fromCharCode(keyCode);
+        if (event.shiftKey) {
+            key = key.toUpperCase();
+        } else {
+            key = key.toLowerCase();
+        }
+    }
+
+    if (key) {
+        var next = types[0];
+        if (next.textContent === key) {
+            next.classList.add('ok');
+            types.shift();
+            if (types.length === 0) {
+                alert('finish');
+            } else{
+                next.classList.add('ng');
+            }
+        }
+    }
+
+    console.log(key);
+
 });

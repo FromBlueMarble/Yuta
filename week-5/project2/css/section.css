@@ -1,0 +1,79 @@
+#next_btn{
+    line-height:70px;
+      height: 70px;
+      width: 70px;
+    border-radius:100%;
+      display: inline-block;
+      background: #4285F4;
+    color:white;
+      margin: 1.3%;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+                0 3px 1px -2px rgba(0, 0, 0, 0.2),
+                0 1px 5px 0 rgba(0, 0, 0, 0.12);
+      top: 0;
+      left:0;
+      position: fixed;
+          font-size:50px;
+      text-align:center;
+  
+  }
+  
+  #back_btn{
+    line-height:70px;
+      height: 70px;
+      width: 70px;
+    border-radius:100%;
+      display: inline-block;
+      background: #F44141;
+    color:white;
+      margin: 1.3%;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+                0 3px 1px -2px rgba(0, 0, 0, 0.2),
+                0 1px 5px 0 rgba(0, 0, 0, 0.12);
+      top: 0;
+      right:0;
+      position: fixed;
+      font-size:50px;
+      text-align:center;
+  
+  }
+  
+  footer{
+      width: 100%;
+      height: 150px;
+      float: left;
+      background-color: bisque;
+  }
+  
+  .section1{
+      width: 100%;
+      height: 150px;
+      float: left;
+  }
+  .section2{
+      width: 100%;
+      height: 354px;
+     float: left;
+  }
+  
+  .section3{
+      width: 100%;
+      height: 441px;
+      float: left;
+  }
+  
+  .section4{
+      width: 100%;
+      height: 311px;
+      float: left;
+  }
+  
+  .section5{
+      width: 100%;
+      height: 810px;
+      float: left;
+  }
+  
+  .cor1{background-color: tan;}
+  .cor2{background-color: blue;}
+  .cor3{background-color:darkcyan;}

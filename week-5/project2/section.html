@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>section tag</title>
+    <link rel="stylesheet" type="text/css" href="/Users/tesuto/Documents/ciccc_IvanClass/week-5/project2/css/section.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+<body>
+    
+    <div class="gridContainer clearfix">
+    
+      <div id="next_btn">↓</div>
+      <div id="back_btn">↑</div>
+    
+    
+      <div class="section1 cor1 control"></div>  
+      <div class="section2 cor2 control"></div>
+      <div class="section3 cor3 control"></div>
+      <div class="section4 cor1 control"></div>
+      <div class="section5 cor2 control"></div>
+    <footer class="control">footer</footer>    
+    </div>
+
+    <script>
+    $(function() {
+
+var idx = -1;
+var isDirty = true;
+var controlPos = 0;
+var scrollTop = 0;
+var targetTop = 0;
+$(function(){
+    $(window).on("load scroll", function(e){
+        $(".control").each(function(index, ele){
+            controlPos = $(ele).offset().top;
+            scrollTop = $(window).scrollTop();
+
+            idx = -1;
+            if(controlPos == scrollTop){
+                idx = index+1;
+                isDirty = false;
+                return false;
+            }
+
+            if(controlPos > scrollTop){
+                idx = index;
+                isDirty = true;
+                return false;
+            }
+        });
+    });
+
+    $("#next_btn").on("click", function(e){
+        if($(".control").eq(idx).is("*") && idx >= 0){
+            idx = idx;
+            console.log("idx:"+idx);
+            targetTop = $(".control").eq(idx).offset().top;
+            $("html, body").animate({scrollTop:targetTop}, "normal");
+        }
+        return false;
+    });
+
+        $("#back_btn").on("click", function(e){
+        if($(".control").eq(idx).is("*") && idx >= 0){
+          if(isDirty) {
+            idx2 = idx-1;            
+          } else {
+            idx2 = idx-2
+          }
+            console.log("idx2:"+idx2);
+            if(idx2 === -1){
+                return false; 
+            }
+
+
+
+
+            targetTop = $(".control").eq(idx2).offset().top;
+            $("html, body").animate({scrollTop:targetTop}, "normal");
+        }
+        return false;
+
+    });
+
+});
+});
+    </script>
+</body>
+</html>

@@ -35,3 +35,11 @@ body {
     font-weight: bold;
     font-size: 64px;
 }
+
+.type.ng {
+    color: #ff2789;
+}
+
+.type.ok {
+    color: #2789ff;
+}
