@@ -42,10 +42,10 @@ body {
 
 .type.ok {
     color: #2789ff;
-    -webkit-animation: pyon 1s;
+    -webkit-animation: pyonkuru 1s;
 }
 
-@-webkit-keyframes pyonkul {
+@-webkit-keyframes pyonkuru {
     0% {
         transform: translateY(0);
     }

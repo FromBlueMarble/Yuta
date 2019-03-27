@@ -13,7 +13,8 @@ var startTime = 0;
 
 function init() {
     document.querySelector('.container').innerHTML = '';
-    types= QUESTION.split('').map(function(str){
+
+    types = QUESTION.split('').map(function(str){
         var type = document.createElement('span');
         type.className = 'type';
         type.textContent = str;
@@ -65,9 +66,7 @@ document.addEventListener('keydown',function(event){
         if (timer === null) {
             timerStart();
         }
-    }
 
-    if (key) {
         var next = types[0];
         if (next.textContent === key) {
             next.classList.add('ok');
@@ -83,10 +82,14 @@ document.addEventListener('keydown',function(event){
     console.log(key);
 });
 
-document.querySelector('.container').addEventListener('clock', function(event){})
+document.querySelector('.container').addEventListener('click', function(event) {
     var text = prompt('Please enter sentences');
     if (text) {
         QUESTION = text;
         localStorage.QUESTION = text;
         init();
     }
+});
+
+
+
