@@ -45,7 +45,7 @@ function makeInputBox()
 //4)
 function makeAnimageProp(src,alt)
 {
-
+ return
 }
 
 // 5) Create a Prop that makes a 'table of items'

@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+function createHeader(level, text)
+{
+return <h{level}> {text} </h{level}>
+}
+
 class App extends Component {
   render() {
     return (

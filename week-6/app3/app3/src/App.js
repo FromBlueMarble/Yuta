@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+function makeInputBox()
+{
+  return <input></input>
+}
+
+
 class App extends Component {
   render() {
     return (
