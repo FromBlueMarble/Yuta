@@ -8,6 +8,10 @@ function makePExample(text)
     return<p>{text}</p>
   }
 
+function Welcome(props) {
+  return <h1>Hello, {props}</h1>
+}
+
 class App extends Component {
   render() {
     return (
