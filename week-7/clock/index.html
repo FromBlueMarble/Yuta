@@ -8,7 +8,7 @@
 
     <style>
             html {
-                background: #018DED
+                background: #018DED url(http://unsplash.it/1500/1000?image=881&blur=50);
                 background-size: cover;
                 font-family: 'helvetica neue';
                 text-arign: center;
@@ -60,14 +60,24 @@
 
         <script>
             const secondHand = document.querySelector('.second-hand');
+            const minsHand = document.querySelector('.min-hand');
+            const hourHand = document.querySelector('.min-hand');
 
             function setDate() {
-                const now = Date
+                const now = new Date
                 const seconds = now.getSeconds();
-                const secondsDegrees = ((seconds / 60) * 360);
-                secondHand.style.transform = 'rotate(${second}deg)';
-                console.log(seconds);
-                // vidio7:20
+                const secondsDegrees = ((seconds / 60) * 360) + 90;
+                secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+
+                const mins = now.getMinutes();
+                const minsDegrees = ((mins / 60) * 360) + 90;
+                minHand.style.transform = `rotate(${minsDegrees}deg)`;
+
+
+                const hour = now.getMinutes();
+                const hourDegrees = ((mins / 12) * 360) + 90;
+                minHand.style.transform = `rotate(${minsDegrees}deg)`;
+
             }
 
             setInterval(setDate, 1000);
@@ -75,11 +85,11 @@
 
 </head>
 <body>
-    <div clock="clock">
-        <div clock="clock-face">
-            <div clock="hand hour-hand"></div>
-            <div clock="hand min-hand"></div>
-            <div clock="hand second-hand"></div>
+    <div class="clock">
+        <div class="clock-face">
+            <div class="hand hour-hand"></div>
+            <div class="hand min-hand"></div>
+            <div class="hand second-hand"></div>
         </div>
     </div>
 
