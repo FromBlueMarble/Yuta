@@ -8,16 +8,16 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="<?php echo get_site_url(); ?>/about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="services.html">Services</a>
+                    <a class="nav-link" href="<?php echo get_site_url(); ?>/services">Services</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    <a class="nav-link" href="<?php echo get_site_url(); ?>/Portfolio">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link" href="<?php echo get_site_url(); ?>/contact">Contact</a>
                 </li>
             </ul>
         </div>
