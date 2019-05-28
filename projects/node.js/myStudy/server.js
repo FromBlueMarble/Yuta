@@ -4,7 +4,7 @@ console.log("settings");
 var server = http.createServer();
 server.on('request', function(req, res) {
     res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.write('hello world');
+    res.write('hello from ' + req.url);
     res.end();
 });
 server.listen(settings.port, settings.host);
