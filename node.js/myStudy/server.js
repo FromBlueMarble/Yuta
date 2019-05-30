@@ -20,10 +20,12 @@ server.on('request', function(req, res) {
     if(req.method === 'POST') {
         req.data = "";
         req.on("readable", function() {
-            req.data += read.read();
+            req.data += req.read();
         })
         req.on("end", function() {
-
+            var query = qs.parse(req.data);
+            posts.push(query.name);
+            renderForm(posts, res);
         });
     }else {
         renderForm(posts, res);
