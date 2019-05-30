@@ -1,6 +1,5 @@
 exports.port = 1337;
-exports.host = '192.168.1.68';
+exports.host = '10.97.114.48';
 exports.db =  'nodedb';
 
-// 127.0.0.1
-// 192.168.1.68
+// 10.97.114.48

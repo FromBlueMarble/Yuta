@@ -21,7 +21,7 @@ server.on('request', function(req, res) {
         req.data = "";
         req.on("readable", function() {
             req.data += req.read();
-        })
+        });
         req.on("end", function() {
             var query = qs.parse(req.data);
             posts.push(query.name);
