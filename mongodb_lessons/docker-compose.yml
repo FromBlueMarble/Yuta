@@ -1,0 +1,8 @@
+version: '2'
+services:
+   myProjectMongob:
+       image: mongo:latest
+       container_name: "mongodb2"
+       ports:
+           - 27018:27017
+       command: mongod --smallfiles --logpath=/dev/null # --quiet
