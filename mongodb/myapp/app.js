@@ -2,7 +2,7 @@ var express = require('express'),
     app = express();
 
     // app.use(app.router); Error: 'app.router' is deprecated!
-
+        app.use(express.static(__dirname + '/public'));
     //To the name add "?" Becomes optional
 
     // app.get('/about', function(req, res) {
