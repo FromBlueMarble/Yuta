@@ -3,10 +3,14 @@ var express = require('express'),
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
+
+app.use(express.json());
+app.use(express.urlencoded());
+    
     //middleware
+    // app.use(express.logger('dev'));
     // app.use(app.router); Error: 'app.router' is deprecated!
     //Most middleware (like logger) is no longer bundled with Express and must be installed separately
-    // app.use(express.logger('dev'));
 app.use(express.static(__dirname + '/public'));
 
     //To the name add "?" Becomes optional
@@ -15,22 +19,18 @@ app.use(express.static(__dirname + '/public'));
     //     res.send('about this page!');
     // });
 
-    app.param('id', function(req, res, next, id) {
-        var users = ['taguchi', 'fkoji', 'dotinstall'];
-        req.params.name = users[id];
-        next();
+    app.get('/new', function(req,res) {
+        res.render('new');
     });
-    app.get('/hello/:id', function(req,res) {
-        res.send('hello ' + req.params.name);
-    });
-    app.get('/bye/:id', function(req,res) {
-        res.send('bye ' + req.params.name);
+    app.post('/create', function(req,res) {
+        res.send(req.body.name);
     });
 
     app.listen(3000);
     console.log("sever starting!");
 
-
+//10.97.114.48
+//127.0.0.1
 
 // var express = require('express');
 // var app = express();
