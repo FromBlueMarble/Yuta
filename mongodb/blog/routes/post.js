@@ -3,8 +3,8 @@ var posts = [
     {title: 'title1', body: 'body1'},
     {title: 'title2', body: 'body2'}
 
-]
+];
 
 exports.index = function(req, res) {
-    res.render('posts/index');
+    res.render('posts/index' , {posts: posts});
 };

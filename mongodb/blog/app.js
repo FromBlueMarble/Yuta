@@ -1,7 +1,7 @@
 var express = require('express'),
+
     app = express(),
     post = require('./routes/post');
-    ;
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
@@ -9,7 +9,7 @@ app.set('view engine', 'ejs');
 //middleware
 app.use(express.json());
 app.use(express.urlencoded());
-app.use(express.methodOverride());    
+app.use(express.methodOverride());
 
     // app.use(express.logger('dev'));
     // app.use(app.router); Error: 'app.router' is deprecated!
