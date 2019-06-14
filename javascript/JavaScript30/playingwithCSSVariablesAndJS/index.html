@@ -26,6 +26,27 @@
     <img src="https://images.unsplash.com/photo-1503455637927-730bce8583c0?auto=format&fit=crop&w=1350&q=80" width="600px">
 
     <style>
+
+            body {
+                text-align: center;
+            }
+
+            body {
+                background: #193549;
+                color: white;
+                font-family: 'helvetica neue', sans-serif;
+                font-weight: 100;
+                font-size: 50px;
+            }
+
+            .controls {
+                margin-bottom: 50px;
+            }
+
+            a {
+                
+            }
+
             :root {
             --base: #ffc600;
             --spacing: 10px;
@@ -41,12 +62,28 @@
         .h1{
             color: var(--base);
         }
+
+        a{
+            color: var(--base);
+            text-decoration: none;
+        }
+
+        input {
+            width: 100px;
+        }
+
     </style>
 
 
     <script>
+    //get document
         const inputs = document.querySelectorAll('controls input');
     
+         function handleUpdate(){
+             console.log(this.value);
+         }
+
+         inputs.forEach(input => input.addEventListener('change', handleUpdate));
     </script>
 
   </body>
