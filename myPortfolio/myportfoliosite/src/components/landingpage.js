@@ -8,12 +8,16 @@ class Landing extends Component {
                 <Grid className="Landing-grid">
                     <Cell col={12}>
                         <img 
-                            src="/Users/tesuto/Desktop/ciccc/myPortfolio/myportfoliosite/src/img/resume.jpg"
+                            src="https://www.w3schools.com/w3images/avatar2.png"
                             alt="avatar"
                             className="avatar-img"
                             />
                             <div className="banner-text">
                                 <h1>Front end developer</h1>
+                                <hr/>
+                            <p>HTML/CSS | Bootstrap | JavaScript | React | Node.js | Express | MongoDB | WordPress
+                            <br/>
+                            PhotoShop | Illustrator | XD | UI/UX</p>
 
                             </div>
                     </Cell>
