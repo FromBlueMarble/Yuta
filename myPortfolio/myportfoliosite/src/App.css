@@ -14,7 +14,17 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
 
+.projects-grid {
+  display: flex;
+}
+
+/* Resume Page css */
+.resume-right-col {
+  background: #27221F;
+  color: white;
+  padding: 2em;
 }
 
 /* contact page css */
