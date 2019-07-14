@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Grid, Cell } from 'react-mdl';
 import Education from './education';
+import Experience from './experience';
 
 class Resume extends Component {
     render() {
@@ -30,11 +31,38 @@ class Resume extends Component {
                         <h5>Web</h5>
                         <p>mywebsite</p>
                         <hr style={{borderTop: '3px solid #833fb2', width: '50%'}}/>
-
                     </Cell>
+
                     <Cell className="resume-right-col" col={8}>
                         <h2>Education</h2>
-                        <Education />
+
+                        <Education
+                            startYear={2002}
+                            endYear={2006}
+                            schoolName="My University"
+                            schoolDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+                            />
+                        <hr style={{borderTop: '3px solid #e22947'}} />>
+
+                    <h2>Experience</h2>
+                        
+                    <Experience>
+                        startYear={2009}
+                        endYear={2012}
+                        jobName="First job"
+                        jpbDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+                        />
+
+                        <Experience>
+                        startYear={2012}
+                        endYear={2016}
+                        jobName="Second job"
+                        jpbDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+                        />
+                        <hr style={{borderTop: '3px solid #e22947'}} />>
+                        <h2>Skills.js</h2>
+
+
                     </Cell>
                 </Grid>
             </div>
