@@ -8,29 +8,28 @@ import React, { Component } from 'react'; import { Grid, Cell } from 'react-mdl'
                     <hr/>
                     <p>HTML/CSS | Bootstrap | JavaScript | React | Node.js | Express | MongoDB | WordPress
                         <br/>PhotoShop | Illustrator | XD | UI/UX</p>
-    
+
                     <div className="social-links">
-    
                         {/* LinkdIn */}
-                        <a href="http://google/com" rel="noopenr noreferrer" target="_blank">
+                        <a href="http://google/com" rel="noopenr noreferrer">
                             <i className="fa fa-linkedin-square" aria-hidden="true" />
                         </a>
-    
+
                         {/* Github */}
-                        <a href="https://github.com/FromBlueMarble" rel="noopenr noreferrer" target="_blank">
+                        <a href="https://github.com/FromBlueMarble" rel="noopenr noreferrer">
                             <i className="fa fa-github-square" aria-hidden="true" />
                         </a>
 
                         {/* FreecodeCamp */}
-                        <a href="https://github.com/FromBlueMarble" rel="noopenr noreferrer" target="_blank">
+                        <a href="https://github.com/FromBlueMarble" rel="noopenr noreferrer">
                             <i className="fa fa-free-code-camp" aria-hidden="true" />
                         </a>
-{/* 
+{/*
                         {/* other }
                         <a href="https://github.com/FromBlueMarble" rel="noopenr noreferrer" target="_blank">
                             <i className="fa fa-free-code-camp" aria-hidden="true" />
                         </a> */}
-    
+
                     </div>
                 </div>
             </Cell>
