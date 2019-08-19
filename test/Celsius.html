@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/Users/tesuto/Desktop/test/css/style.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <title>Document</title>
+
+    <style>
+        body {
+         font-family:arial;
+         font-size:20px;
+
+         }
+         label {
+                float: left;
+                width: 30%;
+                text-align: left;
+                margin-right: 1em;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -o-text-overflow: ellipsis;
+        }
+/*
+        .form-field-no-caption {
+        margin-left
+        input[type="radio"]{
+         float: left;
+        }
+        } */
+        </style>
+
+</head>
+<body>
+
+ <script type="text/javascript">
+
+function solve_temp() {
+	 var input = document.getElementById("userInput").value;
+ var celsius = parseFloat(input);
+
+ if (isNaN(celsius)) {
+ alert("Please enter a number.");
+ document.getElementById("userInput").value="";
+ document.getElementById("userInput").focus();
+ document.getElementById("result").innerHTML = "";
+}
+ else {
+var solve_fahrenheit = celsius * 9 / 5 + 32;
+var solve_results = celsius +'\xB0C in Celsius is equivalent to '
++ solve_fahrenheit + '\xB0F' + ' in Fahrenheit.' ;
+document.getElementById("result").innerHTML = solve_results;
+}
+ }
+function clear_textbox(){
+ document.getElementById("result").innerHTML = "";
+ document.getElementById("userInput").value="";
+ document.getElementById("userInput").focus();
+
+}
+</script>
+</head>
+<body>
+<h2> Celsius To Fahrenheit in JavaScript </h2>
+Enter temperature in celsius
+ <br>
+<input type="text" id="userInput" size="8" maxlength="8" autofocus>
+<br><br>
+<input type="submit" value="Check" title="Click here to celsius to fahrenheit." onclick="solve_temp()" />
+<input type="submit" value="Clear" title="Click here to clear the text box." onclick="clear_textbox()" /><br><br><br>
+<p id="result"></p>
+
+
+
+
+
+</body>
+</html>

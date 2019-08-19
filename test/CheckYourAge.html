@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/Users/tesuto/Desktop/test/css/style.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="form1">
+        <div>What your age?</div>
+        <input id="textBox1" type="var" value="" />
+        <input type="button" value="Exec" onclick="age();" />
+    </form>
+    <div id="output"></div>
+
+    <script>
+        function onButtonClick() {
+        var score = textBox1;
+        var target = document.getElementById("output");
+
+        if (score == 0) {
+        document.write("oh Baby, how can you work with computer that early in life");
+        } else if (score <= 0) {
+        document.write("you’re kidding, right?");
+        }
+        else if (score >= 100) {
+        document.write("you are too old to play!");
+        }
+        }
+    </script>
+
+  <script>
+        function age(){
+          var x= document.getElementById("textBox1").value;
+
+          if( x<=0){
+
+               document.getElementById("output").innerHTML= "you’re kidding, right?";
+              }else if (x == 0) {
+
+               document.getElementById("output").innerHTML= "oh Baby, how can you work with computer that early in life";
+
+              }else if(x >= 100){
+
+               document.getElementById("output").innerHTML= "you are too old to play!";
+              }
+           else{
+            document.getElementById("output").innerHTML= "YOU CAN PLAY";
+              }
+           }
+    </script>
+
+</body>
+</html>

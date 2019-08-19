@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/Users/tesuto/Desktop/test/css/style.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" placeholder="enter your name" id="yourname"><button onclick="checkName()" value="Chaeck">finsh</button> <br>
+        <h1 id="good"></h1>
+
+
+        <script>
+
+                function checkName() {
+
+                var str = document.getElementById("yourname").value;  //input
+              //input box show＆word in str
+                //str enmpty
+
+                //show name
+
+                document.getElementById("good").innerHTML="Nice work! Let’s start! </b>" + str + "</b>！";
+                if (str == "")  {
+                        document.getElementById("good").innerHTML="I didn't cach that </b>" + str + "！";
+                }
+                // document.write("<center>");
+                // document.write("Nice work! Let’s start!、<b>" + str + "</b>！");
+                // document.write("</center>");
+                }
+        </script>
+</body>
+</html>

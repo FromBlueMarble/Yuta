@@ -1,0 +1,9 @@
+body {
+    background-color: aquamarine;
+
+}
+
+* {
+    top: 50%;
+    left: 45%;
+}
