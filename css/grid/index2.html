@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid Layout</title>
+    <style type="text/css">
+        #container {
+            display: grid;
+            grid-template-rows: 100px 50px;
+            grid-template-columns: 150px 1fr;
+            grid-template-areas: 
+            "areaA areaB"
+            "areaA areaC";
+        }
+
+        #itemA {
+            grid-area: areaA;
+            background: #f88;
+        }
+        #itemB {
+            grid-area: areaB;
+            background: #8f8;
+        }
+        #itemC {
+            grid-area: areaC;
+            background: #88f;
+        }
+    </style>
+</head>
+<body>
+        <div id="container">
+            <div id="itemA">A</div>
+            <div id="itemB">B</div>
+            <div id="itemC">C</div>
+        </div>
+</body>
+</html>
