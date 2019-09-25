@@ -12,6 +12,10 @@ class Lesson extends React.Component{
                 this.setState({ isModalOpen: true});
             }
 
+            handleClickClose(){
+                this.setState({isModalOpen: false});
+            }
+
     render(){
         let modal;
         if (this.state.isModalOpen){
@@ -22,7 +26,9 @@ class Lesson extends React.Component{
                 <h2>{this.props.name}</h2>
                 <p>{this.props.introduction}</p>
                 </div>
-                <button className='modal-close-btn'>
+                <button className='modal-close-btn'
+                onClick = {() => {this.handleClickClose()}}
+                >
                 close
                 </button>
                 </div>
