@@ -49,7 +49,7 @@ class Lesson extends React.Component{
                 <img src = {this.props.image}/>
             </div>
                 {modal}
-         
+
             </div>
         );
     }
