@@ -55,7 +55,7 @@ class ContactForm extends React.Component {
         if(this.state.hasContentError){
             contentErrorText = (
                 <p className='contact-message-error'>
-                お問い合わせ内容を入力してください
+                Please enter your inquiry
                 </p>
             );
         }
